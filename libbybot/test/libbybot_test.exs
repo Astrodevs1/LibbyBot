@@ -6,3 +6,4 @@ defmodule LibbybotTest do
     assert Libbybot.hello() == :world
   end
 end
+
