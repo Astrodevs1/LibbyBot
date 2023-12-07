@@ -4,6 +4,11 @@ defmodule Libbybot.Application do
   @moduledoc false
 
   use Application
+  alias Alchemy.Client
+
+  defp load_modules do
+    use LibbyBot.Commands
+  end
 
   @impl true
   def start(_type, _args) do
@@ -12,9 +17,12 @@ defmodule Libbybot.Application do
       # {Libbybot.Worker, arg}
     ]
 
+    Client.start(Application.get_env(:libbybot, :token))
+    load_modules()
+
     # See https://hexdocs.pm/elixir/Supervisor.html
     # for other strategies and supported options
-    opts = [strategy: :one_for_one, name: Libbybot.Supervisor]
+    opts = [strategy: :one_for_one, name: LibbyBot.Supervisor]
     Supervisor.start_link(children, opts)
   end
 end
