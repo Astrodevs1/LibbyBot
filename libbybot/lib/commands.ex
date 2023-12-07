@@ -1,4 +1,4 @@
-defmodule Allybot.Commands do
+defmodule LibbyBot.Commands do
   use Alchemy.Cogs
 
   Cogs.def ping do
