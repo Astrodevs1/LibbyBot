@@ -1,18 +1,18 @@
 defmodule Libbybot do
-  @moduledoc """
-  Documentation for `Libbybot`.
-  """
+  use Application
+  alias Alchemy.Client
 
-  @doc """
-  Hello world.
+  defmodule Commands do
+    use Alchemy.Cogs
 
-  ## Examples
+    Cogs.def ping do
+      Cogs.say "pong!"
+    end
+  end
 
-      iex> Libbybot.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def start(_type, _args) do
+    run = Client.start("MTE4MjExODUzOTI1MTk0OTY1OQ.GRn1FB.iXH0iR-65dXcbJc3QQh9DVa4-6I_YEjbyz2-c4")
+    use Commands
+    run
   end
 end
