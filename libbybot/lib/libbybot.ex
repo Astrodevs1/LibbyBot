@@ -11,7 +11,7 @@ defmodule Libbybot do
   end
 
   def start(_type, _args) do
-    run = Client.start("MTE4MjExODUzOTI1MTk0OTY1OQ.GRn1FB.iXH0iR-65dXcbJc3QQh9DVa4-6I_YEjbyz2-c4")
+    run = Client.start(Application.get_env(:libbybot, :token))
     use Commands
     run
   end
