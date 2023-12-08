@@ -1,4 +1,4 @@
-defmodule Libbybot.Application do
+defmodule LibbyBot.Application do
   # See https://hexdocs.pm/elixir/Application.html
   # for more information on OTP Applications
   @moduledoc false
@@ -8,8 +8,8 @@ defmodule Libbybot.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Starts a worker by calling: Libbybot.Worker.start_link(arg)
-      # {Libbybot.Worker, arg}
+      # Starts a worker by calling: LibbyBot.Worker.start_link(arg)
+      # {LibbyBot.Worker, arg}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

@@ -1,4 +1,4 @@
-# Libbybot
+# LibbyBot
 
 **TODO: Add description**
 

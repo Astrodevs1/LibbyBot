@@ -1,8 +1,8 @@
-defmodule LibbybotTest do
+defmodule LibbyBotTest do
   use ExUnit.Case
-  doctest Libbybot
+  doctest LibbyBot
 
   test "greets the world" do
-    assert Libbybot.hello() == :world
+    assert LibbyBot.hello() == :world
   end
 end

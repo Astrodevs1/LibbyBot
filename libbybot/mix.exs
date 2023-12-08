@@ -1,4 +1,4 @@
-defmodule Libbybot.MixProject do
+defmodule LibbyBot.MixProject do
   use Mix.Project
 
   def project do
@@ -15,7 +15,7 @@ defmodule Libbybot.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Libbybot, []}
+      mod: {LibbyBot, []}
     ]
   end
 

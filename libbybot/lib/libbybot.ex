@@ -1,4 +1,4 @@
-defmodule Libbybot do
+defmodule LibbyBot do
   use Application
   alias Alchemy.Client
 
